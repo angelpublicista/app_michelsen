@@ -1,0 +1,21 @@
+{
+    "users" : [
+        {
+            "name": "Juan Pablo",
+            "email": "juan.p@gmail.com",
+            "identify" : "1022374091",
+            "typeDocument": "CC",
+            "pass": "123456",
+            "avatar" : "https://picsum.photos/200"
+        },
+
+        {
+            "name": "Camila Guzmán",
+            "email": "camilita@gmail.com",
+            "identify" : "1022374074",
+            "typeDocument": "CC",
+            "pass": "1234567",
+            "avatar" : "https://picsum.photos/200"
+        }
+    ]
+}

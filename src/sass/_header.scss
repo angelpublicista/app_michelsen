@@ -1,0 +1,22 @@
+.app-header{
+    grid-column: 4 / span 9;
+    grid-row: span 1;
+    
+    display: flex;
+    padding: .5em 2em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar-profile{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

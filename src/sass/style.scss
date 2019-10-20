@@ -1,0 +1,37 @@
+/*GENERAL STYLES*/
+body, html, #root{
+    height: 100%;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, a{
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-link{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.app-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    height: 100%;
+}
+
+.content-area{
+    background-color: aqua;
+    grid-column: span 9;
+    grid-row: span 11;
+    background-color: #f8f8f8;
+}
+
+@import "header";
+
+@import "menu-lateral";
+
+@import "forms";
