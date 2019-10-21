@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import './css/style.css';
 import Header from './components/Header';
 import Menu_lateral from './components/Menu-lateral';
+import Content from './components/Content';
 import { users } from './users.json';
 
 class App extends Component {
@@ -20,7 +21,9 @@ class App extends Component {
       <div className="app-container">
          <Header name="Texto" avatar={user.avatar} user={user.name} />
          <Menu_lateral />
-         <div className="content-area" id="content-area"></div>
+         <div className="content-area p-5" id="content-area">
+           <Content />
+         </div>
       </div>
     );
   }

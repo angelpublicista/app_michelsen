@@ -1,15 +1,39 @@
+//Colors
+@import "color";
+
+//Fonts
+@import "typography";
+
 /*GENERAL STYLES*/
 body, html, #root{
     height: 100%;
     overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, a{
-    font-family: 'Be Vietnam', sans-serif;
+
+a{
+    transition: all .3s;
+}
+
+.nav-link {
+    &.disabled {
+        color: $disabled !important;
+    }
+}
+
+.nav-link:hover{
+    opacity: .5;
+}
+
+.box-shadow{
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16);
+    transition: all .4s;
 }
 
 p{
-    font-family: 'Open Sans', sans-serif;
+    color: $text;
 }
 
 .text-link{
@@ -25,9 +49,100 @@ p{
 
 .content-area{
     background-color: aqua;
-    grid-column: span 9;
+    grid-column: span 10;
     grid-row: span 11;
     background-color: #f8f8f8;
+}
+
+.text{
+    &-danger{
+        color: $alert_danger !important;
+    }
+
+    &-principal{
+        color: $alert_principal;
+    }
+
+    &-bold{
+        font-weight: bold;
+    }
+
+    &-semibold{
+        font-weight: 600;
+    }
+
+    &-link{
+        color: $secondary;
+        &:hover{
+            text-decoration: none;
+            opacity: .5;
+        }
+    }
+}
+
+.bg{
+    &-principal{
+        background-color: $alert_principal;
+    }
+}
+
+.label-state{
+    color: #fff;
+    padding: .2em 2em;
+}
+
+.card{
+    border: none;
+    border-radius: 0px;
+
+    &-title{
+        background-color: $principal;
+        color: #fff;
+    }
+
+    &-number{
+        font-size: 4em;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    &-date{
+        color: $principal;
+    }
+
+    &.box-shadow:hover{
+        -webkit-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16);
+        -moz-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16);
+        box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16);
+    }
+}
+
+.table{
+    color: $text;
+
+    th{
+        font-family: 'Be Vietnam', sans-serif;
+        color: $principal;
+    }
+}
+
+#table-all-credits .cont-table{
+    max-height: 200px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+        -webkit-appearance: none;
+        &:vertical{
+            width: 5px;
+        }
+
+        &:horizontal{
+            height: 10px;
+        }
+
+        &-thumb{
+            background-color: $secondary;
+            border-radius: 20px;
+        }
+    }
 }
 
 @import "header";

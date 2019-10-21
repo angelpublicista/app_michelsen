@@ -1,22 +1,47 @@
 .app-header{
-    grid-column: 4 / span 9;
+    grid-column: 3 / span 10;
     grid-row: span 1;
-    
-    display: flex;
-    padding: .5em 2em;
-    align-items: center;
-    justify-content: space-between;
-}
+    padding: 1em 2em;
 
-.avatar-profile{
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin-right: 1em;
-}
+    .nav-link{
+        color: $secondary;
+    }
 
-.navbar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    #nameSection{
+        color: $principal;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+
+    .number-notify{
+        background-color: $alert_danger;
+        width: 13px;
+        height: 13px;
+        font-size: .6em;
+        font-weight: bold;
+        top: 7px;
+        right: 10px;
+    }
+
+    .submenu {
+        background-color: #fff;
+        font-size: .8em;
+        right: 0;
+        display: none;
+
+        &.notifications{
+            min-width: 300px;
+        }
+
+        &.profile{
+            min-width: 170px;
+            font-size: 1em;
+        }
+
+        h5{
+            font-size: .9em;
+            font-weight: bold;
+            color: $principal;
+        }
+    }
 }
