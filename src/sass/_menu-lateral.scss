@@ -6,6 +6,12 @@
     .nav-link {
         color: #fff;
         padding: 1em 0;
-        border-bottom: 1px solid $secondary;
+    }
+
+    .divider{
+        border-color: $secondary;
+        opacity: .3;
+        width: 100%;
+        margin: .3em;
     }
 }

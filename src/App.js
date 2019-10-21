@@ -19,11 +19,9 @@ class App extends Component {
 
     return (
       <div className="app-container">
-         <Header name="Texto" avatar={user.avatar} user={user.name} />
+         <Header user={user.name} />
          <Menu_lateral />
-         <div className="content-area p-5" id="content-area">
-           <Content />
-         </div>
+         <Content />
       </div>
     );
   }

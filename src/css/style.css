@@ -17,11 +17,11 @@ a {
 }
 
 .nav-link.disabled {
-  color: #d4d4d4 !important;
+  color: #fff !important;
 }
 
-.nav-link:hover {
-  opacity: 0.5;
+.nav-link:hover, .nav-link.disabled {
+  opacity: 0.5 !important;
 }
 
 .box-shadow {
@@ -76,10 +76,18 @@ p {
 .bg-principal {
   background-color: #601DE8;
 }
+.bg-danger {
+  background-color: #F33A71 !important;
+}
+.bg-disabled {
+  background-color: #d4d4d4;
+}
 
 .label-state {
   color: #fff;
   padding: 0.2em 2em;
+  display: block;
+  width: 70%;
 }
 
 .card {
@@ -91,7 +99,7 @@ p {
   color: #fff;
 }
 .card-number {
-  font-size: 4em;
+  font-size: 3.5em;
   font-family: "Open Sans", sans-serif;
 }
 .card-date {
@@ -156,6 +164,22 @@ p {
   font-size: 0.8em;
   right: 0;
   display: none;
+  z-index: 1000;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+.app-header .submenu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.app-header .submenu::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+.app-header .submenu::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+.app-header .submenu::-webkit-scrollbar-thumb {
+  background-color: #275385;
+  border-radius: 20px;
 }
 .app-header .submenu.notifications {
   min-width: 300px;
@@ -178,7 +202,12 @@ p {
 .app-aside .nav-link {
   color: #fff;
   padding: 1em 0;
-  border-bottom: 1px solid #275385;
+}
+.app-aside .divider {
+  border-color: #275385;
+  opacity: 0.3;
+  width: 100%;
+  margin: 0.3em;
 }
 
 .form-register {

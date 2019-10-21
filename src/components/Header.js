@@ -2,18 +2,34 @@ import React, {Component} from 'react';
 
 
 class Header extends Component {
+
+    toggleSubmenu(e){
+        e.preventDefault();
+        const elemento = e.target;
+
+        const submenus = document.querySelectorAll('.submenu');
+        for (const submenu of submenus) {
+            submenu.style.display = 'none';
+        }
+        const hash = elemento.dataset.target;
+        document.getElementById(hash).style.display = 'block';
+    }
+  
     render(){
       return (
           <header className="app-header">
             <div className="d-flex flex-row justify-content-between align-items-center">
-              <h2 id="nameSection">{this.props.name}</h2>
+              <h2 id="nameSection"><i className="far fa-credit-card mr-2"></i> Mis créditos</h2>
 
               <nav>
                 <ul className="nav">
-                    <li className="nav-item"><a href="#" className="nav-link"><i class="fas fa-search"></i></a></li>
+                    <li className="nav-item"><a href="#" className="nav-link"><i className="fas fa-search"></i></a></li>
                     <li className="nav-item position-relative">
-                      <a href="#" className="nav-link position-relative"><i class="far fa-bell"></i><span className="number-notify d-flex justify-content-center align-items-center position-absolute rounded-circle text-light">3</span></a>
-                      <div className="submenu box-shadow position-absolute p-3 notifications">
+                      <a href="#" className="nav-link position-relative" data-target="notifications" onClick={this.toggleSubmenu}>
+                        <i className="far fa-bell" data-target="notifications" onClick={this.toggleSubmenu}></i>
+                        <span className="number-notify d-flex justify-content-center align-items-center position-absolute rounded-circle text-light">3</span>
+                      </a>
+                      <div className="submenu box-shadow position-absolute p-3 notifications" id="notifications">
                           <div className="d-flex justify-content-between align-items-center">
                               <h5 className="m-0">Notificaciones</h5>
                               <a href="#" className="nav-link p-0">Marcar todo como leído</a>
@@ -33,14 +49,16 @@ class Header extends Component {
                       </div>
                     </li>
                     <li className="nav-item position-relative">
-                      <a href="#" className="nav-link"><i class="far fa-user mr-2"></i> {this.props.user}</a>
-                      <div className="submenu box-shadow position-absolute p-3 profile">
+                      <a href="#" className="nav-link" data-target="profile" onClick={this.toggleSubmenu}>
+                        <i className="far fa-user mr-2"></i> {this.props.user}
+                      </a>
+                      <div className="submenu box-shadow position-absolute p-3 profile" id="profile">
                           <a href="#" className="nav-link p-0">
-                            <i class="far fa-user mr-2"></i> Mi perfil
+                            <i className="far fa-user mr-2"></i> Mi perfil
                           </a>
                           <hr></hr>
                           <a href="#" className="nav-link p-0">
-                          <i class="fas fa-sign-out-alt mr-2"></i> Salir
+                          <i className="fas fa-sign-out-alt mr-2"></i> Salir
                           </a>
                       </div>
                     </li>

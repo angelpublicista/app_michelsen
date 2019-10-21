@@ -28,6 +28,25 @@
         font-size: .8em;
         right: 0;
         display: none;
+        z-index: 1000;
+        max-height: 250px;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar{
+            -webkit-appearance: none;
+            &:vertical{
+                width: 5px;
+            }
+    
+            &:horizontal{
+                height: 10px;
+            }
+    
+            &-thumb{
+                background-color: $secondary;
+                border-radius: 20px;
+            }
+        }
 
         &.notifications{
             min-width: 300px;
