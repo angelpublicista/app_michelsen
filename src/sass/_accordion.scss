@@ -1,0 +1,49 @@
+.accordion {
+    .card-header{
+        background-color: $principal;
+        border-bottom: 2px solid #f8f8f8;
+        button{
+            color: white;
+            font-weight: bold;
+        }
+    }
+
+    form{
+        label{
+            font-size: .7em;
+            color: $text;
+            font-family: 'Be Vietnam', sans-serif;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .fa-lock{
+            color: $disabled;
+        }
+
+        .fa-user-edit{
+            cursor: pointer;
+            transition: all .3s;
+            &:hover{
+                color: $secondary;
+            }
+        }
+
+        .form-control{
+            background-color: transparent;
+            color: $principal;
+            font-family: 'Open Sans', sans-serif;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid $disabled;
+            padding-left: 0;
+
+            &:read-only{
+                &:focus{
+                    box-shadow: none !important;
+                }
+            }
+
+        }
+    }
+}

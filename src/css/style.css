@@ -215,4 +215,42 @@ p {
   grid-row: 6;
 }
 
+.accordion .card-header {
+  background-color: #001B3D;
+  border-bottom: 2px solid #f8f8f8;
+}
+.accordion .card-header button {
+  color: white;
+  font-weight: bold;
+}
+.accordion form label {
+  font-size: 0.7em;
+  color: #878787;
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+.accordion form .fa-lock {
+  color: #d4d4d4;
+}
+.accordion form .fa-user-edit {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.accordion form .fa-user-edit:hover {
+  color: #275385;
+}
+.accordion form .form-control {
+  background-color: transparent;
+  color: #001B3D;
+  font-family: "Open Sans", sans-serif;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #d4d4d4;
+  padding-left: 0;
+}
+.accordion form .form-control:read-only:focus {
+  box-shadow: none !important;
+}
+
 /*# sourceMappingURL=style.css.map */
